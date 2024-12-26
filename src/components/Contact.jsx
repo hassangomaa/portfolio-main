@@ -20,51 +20,15 @@ const Contact = () => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
 
-  //   emailjs
-  //     .send(
-  //       "service_mr991gq",
-  //       "template_aju455j",
-  //       {
-  //         form_name: form.name,
-  //         to_name: "Hassan",
-  //         from_email: form.email,
-  //         to_email: "hassan.gomaa.dev@gmail.com",
-  //         message: form.message,
-  //       },
-  //       "dnrokuiwsbhzmgxq"
-  //     )
-  //     .then(
-  //       () => {
-  //         setLoading(false);
-  //         alert("Thank you. I will get back to you as soon as possible.");
-
-  //         setForm({
-  //           name: "",
-  //           email: "",
-  //           message: "",
-  //         });
-  //       },
-  //       (error) => {
-  //         setLoading(false);
-
-  //         console.log(error);
-  //         alert("Something went wrong.");
-  //       }
-  //     );
-  // };
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
       const response = await emailjs.send(
-        "service_mr991gq", // EmailJS service ID
-        "template_aju455j", // EmailJS template ID
+        "service_mzo8hbn", // EmailJS service ID
+        "template_dvrzjsf", // EmailJS template ID
         {
           form_name: form.name,
           to_name: "Hassan",
@@ -72,7 +36,7 @@ const Contact = () => {
           to_email: "hassan.gomaa.dev@gmail.com",
           message: form.message,
         },
-        "dnrokuiwsbhzmgxq" // Public key
+        "H254hCuFozqdg3ezj" // Public key
       );
 
       if (response.status === 200) {
