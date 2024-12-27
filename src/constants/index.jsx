@@ -11,16 +11,21 @@ import {
   reactjs,
   redux,
   sass,
+  tailwind,
+  typescript,
+  docker,
+  mongodb,
+  nodejs,
+  threejs,
   web,
+  mtoun,
+  misrajtech,
+  cord_digital_logo,
+  saladbar,
+  logo,
 } from "../assets";
-import arrows from "../assets/arrowsBanner.png";
-import drcode from "../assets/drcode.png";
-import eliteSmile from "../assets/elitesmileDashboard.png";
-import mui from "../assets/mui.png";
-import rayedDashboard from "../assets/rayedDahsboard.png";
-import wadjet from "../assets/wadjetBanner.png";
-import ymtazLogo from "../assets/ymtaz.svg";
-import ymtaz from "../assets/ymtazBanner.png";
+
+import OrangeLogo from "../assets/OrangeLogo.svg";
 export const navLinks = [
   {
     id: "about",
@@ -42,26 +47,25 @@ export const navLinks = [
 const services = [
   {
     title: "Back-End Development",
-    icon: backend, // Replace with an appropriate icon
+    icon: backend,
   },
   // {
   //   title: "API Development & Integration",
-  //   icon: api, // Replace with an appropriate icon
+  //   icon: api,
   // },
   // {
   //   title: "Database Design & Optimization",
-  //   icon: database, // Replace with an appropriate icon
+  //   icon: database,
   // },
   // {
   //   title: "Microservices Architecture",
-  //   icon: microservices, // Replace with an appropriate icon
+  //   icon: microservices,
   // },
   // {
   //   title: "Project Management & Mentorship",
-  //   icon: management, // Replace with an appropriate icon
+  //   icon: management,
   // },
 ];
-
 const technologies = [
   {
     name: "JavaScript",
@@ -71,58 +75,71 @@ const technologies = [
     name: "Git",
     icon: git,
   },
-  // {
-  //   name: "PHP",
-  //   icon: php, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "Node.js",
-  //   icon: nodejs, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "Laravel",
-  //   icon: laravel, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "NestJS",
-  //   icon: nestjs, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "FastAPI",
-  //   icon: fastapi, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "MySQL",
-  //   icon: mysql, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "PostgreSQL",
-  //   icon: postgresql, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "GraphQL",
-  //   icon: graphql, // Replace with an appropriate icon
-  // },
-  // {
-  //   name: "Firebase",
-  //   icon: firebase, // Replace with an appropriate icon
-  // },
-
-  // {
-  //   name: "Docker",
-  //   icon: docker, // Replace with an appropriate icon
-  // },
+  {
+    name: "CSS",
+    icon: css,
+  },
+  {
+    name: "HTML",
+    icon: html,
+  },
+  {
+    name: "ReactJS",
+    icon: reactjs,
+  },
+  {
+    name: "Redux",
+    icon: redux,
+  },
+  {
+    name: "SASS",
+    icon: sass,
+  },
+  {
+    name: "TailwindCSS",
+    icon: tailwind,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "Docker",
+    icon: docker,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "NodeJS",
+    icon: nodejs,
+  },
+  {
+    name: "ThreeJS",
+    icon: threejs,
+  },
+  {
+    name: "Mobile Development",
+    icon: mobile,
+  },
+  {
+    name: "Backend Development",
+    icon: backend,
+  },
+  {
+    name: "Web Development",
+    icon: web,
+  },
 ];
+
 const experiences = [
   {
     title: "Software Engineer",
     company_name: "SaladBar Vending Machine – KSA",
-    // icon: saladBarIcon, // Replace with an appropriate icon
-    icon: eliteSmile, // Replace with an appropriate icon
+    //company_domain: "https://saladbar.sa",
+    // icon: saladBarIcon,
+    icon: saladbar,
     iconBg: "#383E56",
     date: "Aug 2024 - Present",
     points: [
@@ -133,8 +150,8 @@ const experiences = [
   {
     title: "Software Engineer",
     company_name: "Misraj Technology – KSA",
-    // icon: misrajIcon, // Replace with an appropriate icon
-    icon: eliteSmile, // Replace with an appropriate icon
+    //company_domain: "https://misraj.sa/",
+    icon: misrajtech,
 
     iconBg: "#eeeeee",
     date: "Aug 2023 - Jul 2024",
@@ -147,8 +164,8 @@ const experiences = [
   {
     title: "Back End Developer",
     company_name: "Cord Digital – Egypt",
-    // icon: cordDigitalIcon, // Replace with an appropriate icon
-    icon: eliteSmile, // Replace with an appropriate icon
+    //company_domain: "https://corddigital.com/en",
+    icon: cord_digital_logo,
 
     iconBg: "#383E56",
     date: "Feb 2023 - Jul 2023",
@@ -161,9 +178,8 @@ const experiences = [
   {
     title: "Back End Engineer",
     company_name: "Orange Digital Center – Egypt",
-    // icon: orangeDigitalIcon, // Replace with an appropriate icon
-    icon: eliteSmile, // Replace with an appropriate icon
-
+    //company_domain: "https://www.orangedigitalcenters.com/country/EG/home",
+    icon: OrangeLogo,
     iconBg: "#eeeeee",
     date: "Sep 2022 - Jan 2023",
     points: [
@@ -174,8 +190,8 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "Freelance – Egypt",
-    // icon: freelanceIcon, // Replace with an appropriate icon
-    icon: eliteSmile, // Replace with an appropriate icon
+    //company_domain: "https://www.linkedin.com/in/hassangomaaeng/",
+    icon: logo,
 
     iconBg: "#383E56",
     date: "Jan 2022 - Present",
@@ -215,7 +231,7 @@ const projects = [
       },
     ],
     // image: muttonApp, // Replace with the project image
-    image: wadjet, // Replace with the project image
+    image: mtoun, // Replace with the project image
     source_code_link: "https://mtoun.com/", // Replace with the actual link
   },
   // {

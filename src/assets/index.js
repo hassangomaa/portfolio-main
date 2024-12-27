@@ -26,19 +26,18 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import imdb from "./IMDB.png"
-import food from "./Food.png";
-import dark from "./Dark.png";
-import eco from "./Ecomm.png";
-import secure from "./work3.png"
-import game from "./Gamming.png"
+//mtoun.webp
+import mtoun from "./mtoun.webp";
+//misrajtech_logo.jpeg
+import misrajtech from "./misrajtech_logo.jpeg";
+//cord_digital_logo.jpeg
+import cord_digital_logo from "./cord_digital_logo.jpeg";
+// saladbar_logo.jpeg;
+import saladbar from "./saladbar_logo.jpeg";
 export {
   logo,
-  game,
-  imdb,
   ena,
   es6,
-  secure,
   sass,
   backend,
   creator,
@@ -63,8 +62,8 @@ export {
   meta,
   shopify,
   starbucks,
-  tesla,
-  food,
-  dark,
-  eco,
+  mtoun,
+  misrajtech,
+  cord_digital_logo,
+  saladbar,
 };
