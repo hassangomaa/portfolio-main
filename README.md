@@ -1,6 +1,6 @@
 # My Portfolio
 
-Welcome to my personal portfolio website! This project showcases my skills, projects, and professional background as a backend developer, security enthusiast, and DevOps practitioner. This portfolio is fully designed and developed by me, **Eng. Hassan Gomaa**.
+Welcome to my personal portfolio website! This project showcases my skills, projects, and professional background as a backend developer, security enthusiast, and DevOps practitioner. This portfolio is fully designed and developed by me, **Eng. Hassan Gomaa.**.
 
 ---
 
