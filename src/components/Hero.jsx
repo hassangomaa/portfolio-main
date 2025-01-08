@@ -24,7 +24,24 @@ const Hero = () => {
             <Typical
               loop={Infinity}
               wrapper="b"
-              steps={["Single", 900, "Responsive", 1500, "Accessible", 2000]}
+              steps={[
+                "Secure APIs",
+                1000,
+                "Scalable Systems",
+                1500,
+                "Real-time Communication",
+                2000,
+                "Microservices",
+                2500,
+                "CI/CD Pipelines",
+                3000,
+                "Database Optimization",
+                3500,
+                "Cloud Deployment",
+                4000,
+                "Team Leadership",
+                4500,
+              ]}
               className="text-[#915EFF]"
             ></Typical>
             <br className="sm:block hidden" />

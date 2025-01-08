@@ -20,45 +20,42 @@ const Contact = () => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        "service_mr991gq",
-        "template_aju455j",
+    try {
+      const response = await emailjs.send(
+        "service_mzo8hbn", // EmailJS service ID
+        "template_dvrzjsf", // EmailJS template ID
         {
           form_name: form.name,
           to_name: "Hassan",
           from_email: form.email,
-          to_email: "hassangomaa974@gmail.com",
+          to_email: "hassan.gomaa.dev@gmail.com",
           message: form.message,
         },
-        "gbre ligy oglk kzgs"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-
-          console.log(error);
-          alert("Something went wrong.");
-        }
+        "H254hCuFozqdg3ezj" // Public key
       );
+
+      if (response.status === 200) {
+        alert("Thank you! I will get back to you as soon as possible.");
+        setForm({ name: "", email: "", message: "" }); // Reset form
+      } else {
+        throw new Error("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false); // Stop loading
+    }
   };
 
   return (
-    <div id="getintouch"
+    <div
+      id="getintouch"
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div

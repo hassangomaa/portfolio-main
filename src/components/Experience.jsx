@@ -34,7 +34,7 @@ const ExperienceCard = ({ experience }) => {
     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <a href="https://smartleadtech.com/" target="_blank">
+        <a href={experience.company_domain} target="_blank">
           <p
             className="text-secondary text-[16px] font-semibold"
             style={{ margin: 0, color: "skyblue" }}
