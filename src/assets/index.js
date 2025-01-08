@@ -7,13 +7,13 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import ena from "./ena.png";
-import es6 from "./ES6.png"
+import es6 from "./ES6.png";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
+import javascripticon from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
@@ -26,19 +26,18 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import imdb from "./IMDB.png"
-import food from "./Food.png";
-import dark from "./Dark.png";
-import eco from "./Ecomm.png";
-import secure from "./work3.png"
-import game from "./Gamming.png"
+//mtoun.webp
+import mtoun from "./mtoun.webp";
+//misrajtech_logo.jpeg
+import misrajtech from "./misrajtech_logo.jpeg";
+//cord_digital_logo.jpeg
+import cord_digital_logo from "./cord_digital_logo.jpeg";
+// saladbar_logo.jpeg;
+import saladbar from "./saladbar_logo.jpeg";
 export {
   logo,
-  game,
-  imdb,
   ena,
   es6,
-  secure,
   sass,
   backend,
   creator,
@@ -52,7 +51,7 @@ export {
   figma,
   git,
   html,
-  javascript,
+  javascripticon,
   mongodb,
   nodejs,
   reactjs,
@@ -63,8 +62,8 @@ export {
   meta,
   shopify,
   starbucks,
-  tesla,
-  food,
-  dark,
-  eco,
+  mtoun,
+  misrajtech,
+  cord_digital_logo,
+  saladbar,
 };
