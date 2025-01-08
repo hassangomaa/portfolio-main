@@ -135,7 +135,7 @@ const technologies = [
 ];
 const experiences = [
   {
-    title: "Software Engineer",
+    title: "Software Engineer || Team Lead",
     company_name: "SaladBar Vending Machine – KSA",
     company_domain: "https://saladbar.sa",
     icon: saladbar,
