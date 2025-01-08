@@ -9,7 +9,6 @@ import {
   git,
   html,
   javascripticon,
-  // javascript,
   logo,
   misrajtech,
   mobile,
@@ -130,7 +129,7 @@ const technologies = [
     icon: git,
   },
   // {
-  //   name: "javascripticon",
+  //   name: "Java Script",
   //   icon: javascripticon,
   // },
 ];
