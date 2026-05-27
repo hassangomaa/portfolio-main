@@ -71,11 +71,12 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          These projects showcase my expertise in building mission-critical
+          back-end systems across FinTech, RegTech, IoT, e-commerce, and
+          education domains. From distributed microservices with Kafka and Saga
+          orchestration to real-time WebSocket platforms, each project reflects
+          my ability to architect scalable, secure solutions and lead
+          cross-functional teams from concept to production deployment.
         </motion.p>
       </div>
 

@@ -1,15 +1,22 @@
 {
-  "name": "Hassan Gomaa Portfolio",
-  "short_name": "Portfolio",
+  "name": "Hassan Gomaa — Senior Software Engineer",
+  "short_name": "HG Portfolio",
+  "description": "Portfolio of Hassan Gomaa — Senior Back-End Software Engineer, Tech Lead, FinTech & RegTech Specialist",
   "icons": [
     {
       "src": "/logo.svg",
       "sizes": "any",
       "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000"
+  "background_color": "#050816",
+  "theme_color": "#915EFF",
+  "orientation": "portrait-primary"
 }

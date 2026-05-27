@@ -41,9 +41,9 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Welcome to my&nbsp;
-            <span className="sm:block hidden">|&nbsp;Portfolio</span>
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Hassan&nbsp;
+            <span className="sm:block hidden">|&nbsp;FinTech · Tech Lead · Sr. SWE</span>
           </p>
         </Link>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a target={`${nav.id.startsWith("http")? "_blank" : ``}`} href={`${nav.id.startsWith("http")? nav.id : `#${nav.id}`}`}>{nav.title}</a>
+              <a target={`${nav.id.startsWith("http")? "_blank" : ``}`} rel={nav.id.startsWith("http")? "noopener noreferrer" : undefined} href={`${nav.id.startsWith("http")? nav.id : `#${nav.id}`}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
@@ -83,7 +83,7 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-              <a target={`${nav.id.startsWith("http")? "_blank" : ``}`} href={`${nav.id.startsWith("http")? nav.id : `#${nav.id}`}`}>{nav.title}</a>
+              <a target={`${nav.id.startsWith("http")? "_blank" : ``}`} rel={nav.id.startsWith("http")? "noopener noreferrer" : undefined} href={`${nav.id.startsWith("http")? nav.id : `#${nav.id}`}`}>{nav.title}</a>
               </li>
               ))}
             </ul>

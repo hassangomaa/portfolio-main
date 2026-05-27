@@ -16,36 +16,31 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Hassan</span>
+            Hi, I'm <span className="text-[#915EFF]">Hassan Gomaa</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm Back-end web developer, I'm building{" "}
+            FinTech | Tech Lead | Senior Software Engineer
             <br className="sm:block hidden" />
+            I architect &amp; build{" "}
             <Typical
               loop={Infinity}
               wrapper="b"
               steps={[
-                "Secure APIs",
-                1000,
-                "Scalable Systems",
+                "FinTech Platforms",
                 1500,
-                "Real-time Communication",
-                2000,
-                "Microservices",
-                2500,
-                "CI/CD Pipelines",
-                3000,
-                "Database Optimization",
-                3500,
-                "Cloud Deployment",
-                4000,
-                "Team Leadership",
-                4500,
+                "RegTech Compliance Systems",
+                1500,
+                "Distributed Microservices",
+                1500,
+                "Event-Driven Architectures",
+                1500,
+                "Real-Time Streaming Systems",
+                1500,
+                "Scalable Back-End Solutions",
+                1500,
               ]}
               className="text-[#915EFF]"
-            ></Typical>
-            <br className="sm:block hidden" />
-            {"       "}Web Apps
+            />
           </p>
         </div>
       </div>

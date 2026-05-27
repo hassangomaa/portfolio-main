@@ -21,35 +21,52 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
+  const sendTelegramNotification = async (name, email, message) => {
+    const token = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+    const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+    if (!token || !chatId) return;
+
+    const text = `📩 New Contact Form Message\n\n👤 Name: ${name}\n📧 Email: ${email}\n💬 Message:\n${message}`;
+
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML" }),
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await emailjs.send(
-        "service_mzo8hbn", // EmailJS service ID
-        "template_dvrzjsf", // EmailJS template ID
-        {
-          form_name: form.name,
-          to_name: "Hassan",
-          from_email: form.email,
-          to_email: "hassan.gomaa.dev@gmail.com",
-          message: form.message,
-        },
-        "H254hCuFozqdg3ezj" // Public key
-      );
+      const [emailResponse] = await Promise.allSettled([
+        emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            form_name: form.name,
+            to_name: "Hassan",
+            from_email: form.email,
+            to_email: "hassan.gomaa.dev@gmail.com",
+            message: form.message,
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        ),
+        sendTelegramNotification(form.name, form.email, form.message),
+      ]);
 
-      if (response.status === 200) {
+      if (emailResponse.status === "fulfilled" && emailResponse.value.status === 200) {
         alert("Thank you! I will get back to you as soon as possible.");
-        setForm({ name: "", email: "", message: "" }); // Reset form
+        setForm({ name: "", email: "", message: "" });
       } else {
-        throw new Error("Failed to send email. Please try again.");
+        throw new Error("Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error sending message:", error);
       alert("Something went wrong. Please try again later.");
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false);
     }
   };
 

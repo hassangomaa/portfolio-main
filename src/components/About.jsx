@@ -43,11 +43,17 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am an experienced software engineer with over 3 years of expertise in
-        back-end development, cybersecurity, and project management. I deliver
-        scalable, secure, and high-quality software solutions across diverse
-        industries. I am passionate about mentoring talent, sharing knowledge,
-        and growing within forward-thinking teams.
+        As a software engineer, I'm highly motivated to develop web applications
+        that are not only feature-rich and user-friendly, but also secure and free
+        of vulnerabilities. I take pride in writing clean, structured, and
+        well-organized code using a variety of technologies. With 4+ years of
+        experience building mission-critical FinTech platforms, RegTech compliance
+        systems, and distributed microservices, I specialize in Java Spring Boot,
+        Python Django/FastAPI, PHP Laravel, and Node.js NestJS. I have a strong
+        passion for security engineering, and possess the technical skills and
+        knowledge necessary to identify and mitigate risks to ensure the safety of
+        clients' data. I'm always eager to learn more about the constantly-evolving
+        field of cybersecurity and consider myself a fast learner.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
