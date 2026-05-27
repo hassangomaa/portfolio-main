@@ -53,7 +53,7 @@ const Certifications = () => {
         VMware, Google, Orange Digital Center, ITI, and NTI.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-10 flex flex-wrap gap-7">
         {certifications.map((cert, index) => (
           <CertificationCard key={cert.title} index={index} certification={cert} />
         ))}
