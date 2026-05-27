@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Tilt } from "react-tilt";
+import Tilt from "react-tilt";
 
 import { styles } from "../styles";
 import { certifications } from "../constants";
@@ -8,17 +8,15 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const CertificationCard = ({ certification, index }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt
+      options={{ max: 45, scale: 1, speed: 450 }}
+      className="xs:w-[250px] w-full"
+    >
       <motion.div
         variants={fadeIn("up", "spring", index * 0.3, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
           className="bg-tertiary rounded-[20px] py-5 px-6 min-h-[120px] flex flex-col justify-between"
         >
           <div>
