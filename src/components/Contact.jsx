@@ -24,15 +24,17 @@ const Contact = () => {
   const sendTelegramNotification = async (name, email, message) => {
     const token = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
     const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
-    if (!token || !chatId) return;
+    if (!token || !chatId) return false;
 
     const text = `📩 New Contact Form Message\n\n👤 Name: ${name}\n📧 Email: ${email}\n💬 Message:\n${message}`;
 
-    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML" }),
+      body: JSON.stringify({ chat_id: chatId, text }),
     });
+    const data = await res.json();
+    return data.ok === true;
   };
 
   const handleSubmit = async (e) => {
@@ -40,7 +42,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const [emailResponse] = await Promise.allSettled([
+      const [emailResult, telegramResult] = await Promise.allSettled([
         emailjs.send(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -56,7 +58,10 @@ const Contact = () => {
         sendTelegramNotification(form.name, form.email, form.message),
       ]);
 
-      if (emailResponse.status === "fulfilled" && emailResponse.value.status === 200) {
+      const emailOk = emailResult.status === "fulfilled" && emailResult.value.status === 200;
+      const telegramOk = telegramResult.status === "fulfilled" && telegramResult.value === true;
+
+      if (emailOk || telegramOk) {
         alert("Thank you! I will get back to you as soon as possible.");
         setForm({ name: "", email: "", message: "" });
       } else {
